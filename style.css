@@ -973,10 +973,25 @@ footer p {
     padding: 20px;
   }
 
-  /* LINE STAMP GRID */
+  /* LINE STAMP GRID だけ縮小対応 */
   .line-stamp-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr); /* 3列は維持 */
+    gap: 8px;                             /* 少し余白減らす */
+    padding: 0 10px;                       /* 端のはみ出し防止 */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .line-stamp-item {
+    max-width: 120px;   /* アイテム幅を小さくしてはみ出し防止 */
+    width: 100%;
+  }
+
+  .line-stamp-img-wrapper {
+    width: 100%;
+    max-width: 120px;
+    aspect-ratio: 1 / 1;
+    height: auto;
   }
 
   /* TRIAL READING */
