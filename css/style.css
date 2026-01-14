@@ -951,8 +951,26 @@ footer p {
   }
 }
 
-/* スマホ用 */
+/* ===============================
+    RESPONSIVE (MOBILE)
+=============================== */
 @media (max-width: 768px) {
+  /* --- HEROスライドの隙間解消 --- */
+  .hero-inner {
+    height: auto !important;   /* 高さを中身に合わせる */
+    aspect-ratio: 1200 / 350;  /* 画像の比率を維持 */
+    background: transparent;   /* 背景の黒を消す */
+  }
+  .hero-inner img {
+    object-fit: contain;       /* 画像全体を収める */
+  }
+  .prev, .next {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  /* --- レイアウト調整 --- */
   .two-column-inner,
   .bottom-two-column-inner {
     flex-direction: column;
@@ -973,17 +991,17 @@ footer p {
     padding: 20px;
   }
 
-  /* LINE STAMP GRID だけ縮小対応 */
+  /* --- LINE STAMP GRID --- */
   .line-stamp-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3列は維持 */
-    gap: 8px;                             /* 少し余白減らす */
-    padding: 0 10px;                       /* 端のはみ出し防止 */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 0 10px;
     width: 100%;
     box-sizing: border-box;
   }
 
   .line-stamp-item {
-    max-width: 120px;   /* アイテム幅を小さくしてはみ出し防止 */
+    max-width: 120px;
     width: 100%;
   }
 
@@ -994,7 +1012,7 @@ footer p {
     height: auto;
   }
 
-  /* TRIAL READING */
+  /* --- TRIAL READING --- */
   .trial-reading-grid {
     grid-template-columns: 1fr;
     gap: 16px;
