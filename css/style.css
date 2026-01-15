@@ -218,7 +218,7 @@ nav a:hover::after {
 }
 
 .profile-list-history a {
-  color: #C4007F;
+  color: #FF9DDC;
   text-decoration: none;
   font-weight: 500;
 }
@@ -428,7 +428,7 @@ nav a:hover::after {
 
 .latest-label {
   width: 100%;
-  background: #C4007F;
+  background: #FF9DDC;
   color: #fff;
   display: flex;
   align-items: center;
@@ -759,7 +759,7 @@ nav a:hover::after {
 .trial-reading-label {
   width: 100%;
   max-width: 750px;
-  background: #C4007F;
+  background: #FF9DDC;
   color: #fff;
   display: flex;
   align-items: center;
