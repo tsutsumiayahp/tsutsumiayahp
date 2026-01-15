@@ -250,7 +250,7 @@ nav a:hover::after {
     gap: 16px;
   }
 
-  /* ソーシャルアイコン非表示 */
+  /* PC版の横並びソーシャルアイコンは非表示 */
   .social-icons {
     display: none;
   }
@@ -265,7 +265,7 @@ nav a:hover::after {
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1100; /* ナビより上に */
+    z-index: 1100;
   }
 
   .menu-toggle span {
@@ -292,6 +292,7 @@ nav a:hover::after {
     transform: translateY(-10px);
     transition: opacity 0.25s ease, transform 0.25s ease;
     z-index: 1050;
+    overflow: hidden; /* はみ出し防止 */
   }
 
   nav.main-nav.is-open {
@@ -307,15 +308,34 @@ nav a:hover::after {
     padding: 14px 0;
     display: block;
   }
+/* --- メニュー内SNS・お問い合わせ用スタイル --- */
 
+  .sp-menu-bottom {
+    border-top: 1px solid #eee; /* メニューの区切り線 */
+    margin-top: 5px;
+  }
+
+  /* 他のメニュー項目と同じ見た目に統一 */
+  .sp-contact-link {
+    font-weight: 500; /* 太すぎず他の項目に合わせる */
+    color: #333 !important; /* 他と同じ黒 */
+    background-color: #fff !important; /* 白背景 */
+  }
+
+  /* タップした時に少し色が変わるように（任意） */
+  .sp-contact-link:active {
+    background-color: #f5f5f5 !important;
+  }
+
+  /* --- ここまで追加分 --- */
 
   /* ドロップダウンをアコーディオン化 */
   .dropdown-menu {
-    position: relative;           /* 親のtransform影響を排除 */
+    position: relative;
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    display: block;               /* flex → block */
+    display: block;
     transition: max-height 0.3s ease;
     box-shadow: none;
     border: none;
@@ -327,28 +347,35 @@ nav a:hover::after {
   }
 
   .nav-dropdown.is-open .dropdown-menu {
-    max-height: 500px;            /* 調整可能 */
+    max-height: 500px;
     opacity: 1 !important;
     visibility: visible !important;
   }
 
   .dropdown-menu a {
-    display: block !important;     /* 文字消え防止 */
-    width: 100% !important;        /* 横ずれ防止 */
+    display: block !important;
+    width: 100% !important;
     text-align: center;
     padding: 12px 0;
     font-size: 16px;
-    color: #333 !important;        /* 安定表示 */
+    color: #333 !important;
     background: #fafafa;
     border-bottom: 1px solid #eee;
-    box-sizing: border-box !important;  /* 幅ずれ防止 */
-    opacity: 1 !important;              /* 強制表示 */
-    visibility: visible !important;     /* 強制表示 */
-    transform: none !important;         /* 親のtransform影響排除 */
+    box-sizing: border-box !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
   }
 
   .dropdown-menu a:last-child {
     border-bottom: none;
+  }
+}
+
+/* PC版（1201px以上）ではスマホ専用パーツを絶対に隠す */
+@media (min-width: 1201px) {
+  .sp-menu-bottom {
+    display: none !important;
   }
 }
 
