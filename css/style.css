@@ -218,7 +218,7 @@ nav a:hover::after {
 }
 
 .profile-list-history a {
-  color: #FF9DDC;
+  color: #FCB5C1;
   text-decoration: none;
   font-weight: 500;
 }
@@ -428,7 +428,7 @@ nav a:hover::after {
 
 .latest-label {
   width: 100%;
-  background: #FF9DDC;
+  background: #F32C79;
   color: #fff;
   display: flex;
   align-items: center;
@@ -486,7 +486,7 @@ nav a:hover::after {
 .column-right {
   width: calc(36% + 30px);
   flex-shrink: 0;
-  background: #FF9DDC;
+  background: #FCB5C1;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -759,7 +759,7 @@ nav a:hover::after {
 .trial-reading-label {
   width: 100%;
   max-width: 750px;
-  background: #FF9DDC;
+  background: #F32C79;
   color: #fff;
   display: flex;
   align-items: center;
