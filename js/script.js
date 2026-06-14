@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = [
       "images/heroslider/hero1.png",
       "images/heroslider/hero2.png",
-      "images/heroslider/hero3.png"
+      "images/heroslider/hero3.png",
+      "images/heroslider/hero4.png"
     ];
 
     const links = [
